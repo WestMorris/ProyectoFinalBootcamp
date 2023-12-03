@@ -6,6 +6,7 @@
 document.getElementById('fecha').valueAsDate = new Date();
 
 const DETALLEIN = document.getElementById('detalleIngresos');
+const DETALLEOUT = document.getElementById('detalleEgresos');
 const BOTON = document.getElementById('button');
 //Declaramos las variables para calcular el total de cada tabla
 let totalIngreso=0;
@@ -51,9 +52,9 @@ BOTON.addEventListener('click',() => {
     DETALLEIN.appendChild(tr);  
     limpiar();
   } else if(medioPago === 'egreso') {
-    totalIngreso=totalIngreso+parseInt(monto);
+    totalEgreso=totalEgreso+parseInt(monto);
     
-    valor.textContent=formatearNumero(totalIngreso);
+    valorEgreso.textContent=formatearNumero(totalEgreso);
 
     tdDescripcion.textContent = concepto;
     tdFecha.textContent = fecha;
@@ -63,17 +64,17 @@ BOTON.addEventListener('click',() => {
     tr.appendChild(tdFecha);
     tr.appendChild(tdMonto);
     
-    DETALLEIN.appendChild(tr);  
+    DETALLEOUT.appendChild(tr);  
     limpiar();
   }else{
 
   }
 })
-
+//Funcion que agrega puntos cada unidad de mil.
 function formatearNumero(numero){
   return new Intl.NumberFormat("es-PY").format(numero);
 }
-
+//Funcion para limpiar los valores de los inputs y fehcas
 function limpiar() {
   document.getElementById('concepto').value = "";
   document.getElementById('fecha').valueAsDate = new Date();

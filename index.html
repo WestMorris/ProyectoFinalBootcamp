@@ -11,8 +11,8 @@
 </head>
 <body>
     <div>
-        <h1>Proyecto para manejar mis gastos</h1>
-        <h2>Agregar nuevo gasto</h2>
+        <h1>Proyecto para manejar mi balance</h1>
+        <h2>Agregar nuevo registro</h2>
         
         <div id="form-box">
         <div>
@@ -23,7 +23,7 @@
             </select>
         </div>
         <div>
-            <span>Concepto:</span> <input type="text" id="concepto" class="input" placeholder="¿En qué gasté?">
+            <span>Concepto:</span> <input type="text" id="concepto" class="input" placeholder="Descripción">
         </div>
         
         <div>
@@ -34,11 +34,11 @@
         </div>
         </div>
         
-        <div id="button" class="button" onclick="onRegistrarGasto()">Registrar gasto</div>
+        <div id="button" class="button" onclick="onRegistrarGasto()">Registrar</div>
     </div>
     <div class="grilla">
         <div class="card">
-            <h2>Ingresos</h2>
+            <h2>Activos</h2>
             <table class="tabla">
                 <thead>
                     <tr class="fila">
@@ -53,7 +53,7 @@
             <h3>Total Ingresos: <span id="ingresoTotal">5.000</span></h3>
         </div>
         <div class="card">
-            <h2>Egresos</h2>
+            <h2>Pasivos</h2>
             <table class="tabla">
                 <thead>
                     <tr class="fila">
